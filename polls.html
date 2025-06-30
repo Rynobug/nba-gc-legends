@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NBA GC Legends - Polls</title>
+<style>
+  body {
+    margin:0; padding:0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #001f3f; color: white;
+  }
+  nav {
+    background: #e03a3e; padding: 1rem;
+    display: flex; justify-content: center; gap: 2rem;
+  }
+  nav a {
+    color: white; text-decoration: none; font-weight: bold; font-size: 1.2rem;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  header {
+    text-align: center; padding: 3rem 1rem 1rem;
+  }
+  header h1 {
+    font-size: 2.8rem; margin-bottom: 0.5rem;
+    color: #f0f0f0;
+  }
+  main {
+    max-width: 600px; margin: 0 auto; padding: 0 1rem 4rem;
+  }
+  .poll-question {
+    margin-bottom: 1rem; font-weight: bold;
+  }
+  .poll-options label {
+    display: block; margin: 0.5rem 0;
+    cursor: pointer;
+  }
+  .poll-options input {
+    margin-right: 0.5rem;
+  }
+  button {
+    margin-top: 1rem; padding: 0.5rem 1rem;
+    background: #e03a3e; color: white; border: none; border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  button:hover {
+    background: #b83233;
+  }
+  footer {
+    text-align:center; padding: 1rem; background:#e03a3e; color:white; position:fixed; bottom:0; width:100%;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="squad.html">Squad</a>
+  <a href="hot-takes.html">Hot Takes</a>
+  <a href="memes.html">Memes</a>
+  <a href="polls.html">Polls</a>
+  <a href="highlights.html">Highlights</a>
+  <a href="news.html">NBA News</a>
+</nav>
+<header>
+  <h1>Polls</h1>
+</header>
+<main>
+  <form id="pollForm">
+    <div class="poll-question">Who’s the biggest trash talker in the GC?</div>
+    <div class="poll-options">
+      <label><input type="radio" name="trashTalker" value="Ryguy" /> Ryguy</label>
+      <label><input type="radio" name="trashTalker" value="J-Dunk" /> J-Dunk</label>
+      <label><input type="radio" name="trashTalker" value="M-VP" /> M-VP</label>
+      <label><input type="radio" name="trashTalker" value="Lil Curry" /> Lil Curry</label>
+    </div>
+    <button type="submit">Vote</button>
+  </form>
+  <div id="pollResult" style="margin-top:1rem;"></div>
+  <script>
+    const form = document.getElementById('pollForm');
+    const result = document.getElementById('pollResult');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const selected = form.trashTalker.value;
+      result.textContent = `You voted for: ${selected}. Let's see who wins! (Results coming soon!)`;
+    });
+  </script>
+</main>
+<footer>© 2025 NBA GC Legends</footer>
+</body>
+</html>
