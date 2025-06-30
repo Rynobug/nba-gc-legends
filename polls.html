@@ -68,26 +68,15 @@
   <h1>Polls</h1>
 </header>
 <main>
-  <form id="pollForm">
-    <div class="poll-question">Who’s the biggest trash talker in the GC?</div>
-    <div class="poll-options">
-      <label><input type="radio" name="trashTalker" value="Ryguy" /> Ryguy</label>
-      <label><input type="radio" name="trashTalker" value="J-Dunk" /> J-Dunk</label>
-      <label><input type="radio" name="trashTalker" value="M-VP" /> M-VP</label>
-      <label><input type="radio" name="trashTalker" value="Lil Curry" /> Lil Curry</label>
-    </div>
-    <button type="submit">Vote</button>
-  </form>
-  <div id="pollResult" style="margin-top:1rem;"></div>
-  <script>
-    const form = document.getElementById('pollForm');
-    const result = document.getElementById('pollResult');
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      const selected = form.trashTalker.value;
-      result.textContent = `You voted for: ${selected}. Let's see who wins! (Results coming soon!)`;
-    });
-  </script>
+  <h2>Vote in the Poll</h2>
+  <!-- Embed your Google Form for polls here -->
+  <iframe
+    src="https://docs.google.com/forms/d/e/1FAIpQLSd-example-form-link/viewform?embedded=true"
+    width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0"
+  >
+    Loading…
+  </iframe>
+  <p>Poll results will show in the Google Form responses.</p>
 </main>
 <footer>© 2025 NBA GC Legends</footer>
 </body>
